@@ -1,0 +1,129 @@
+/*--- PLACE YOUR CUSTOM STYLES HERE ---*/
+
+/*--- Background Images ---*/
+.bg-shortcodes {
+	background-image: url(../images/backgrounds/2h8.jpeg);
+}
+.bg-light {
+	background-image: url(../images/backgrounds/bg-light.jpg);
+}
+.bg-primary
+{
+    background: rgba(45, 164, 184, 0.71) !important;
+}
+.bg-secondary
+{
+    background: #e6f3f8 !important;
+}
+.bg-3
+{
+    background: #1b5f80 !important;
+}
+.newletter
+{
+	background-image: url(../images/backgrounds/newsletters-svg.svg);
+	background-repeat: no-repeat;
+}
+.bg-4
+{
+  background: #f97518;
+}
+.bg-shop-1 {
+	background-image: url(../images/backgrounds/bg-shop-1.jpg);
+}
+.bg-shop-2 {
+	background-image: url(../images/backgrounds/bg-shop-2.jpg);
+}
+
+.bg-app-1 {
+	background-image: url(../images/backgrounds/bg-app-1.jpg);
+}
+.bg-app-2 {
+	background-image: url(../images/backgrounds/bg-app-2.jpg);
+}
+.bg-app-3 {
+	background-image: url(../images/backgrounds/bg-app-3.jpg);
+}
+.bg-app-4 {
+	background-image: url(../images/backgrounds/bg-app-4.jpg);
+}
+.bg-app-5 {
+	background-image: url(../images/backgrounds/bg-app-5.jpg);
+}
+.bg-app-6 {
+	background-image: url(../images/backgrounds/bg-app-6.jpg);
+}
+
+.bg-event-1 {
+	background-image: url(../images/backgrounds/bg-event-1.jpg);
+}
+.bg-event-2 {
+	background-image: url(../images/backgrounds/bg-event-2.jpg);
+}
+.bg-event-3 {
+	background-image: url(../images/backgrounds/bg-event-3.jpg);
+}
+
+.bg-images-1 {
+	background-image: url(../images/backgrounds/bg-1.jpg);
+}
+.bg-images-2 {
+	background-image: url(../images/backgrounds/bg-2.jpg);
+}
+.bg-images-3 {
+	background-image: url(../images/backgrounds/bg-3.jpg);
+}
+.bg-images-4 {
+	background-image: url(../images/backgrounds/bg-4.jpg);
+}
+.bg-images-5 {
+	background-image: url(../images/backgrounds/28.jpeg);
+}
+.bg-images-6 {
+	background-image: url(../images/backgrounds/bg-6.jpg);
+}
+.bg-images-7 {
+	background-image: url(../images/backgrounds/bg-7.jpg);
+}
+.bg-images-8 {
+	background-image: url(../images/backgrounds/motion-images.jpeg);
+}
+.bg-images-9 {
+	background-image: url(../images/backgrounds/login.jpg);
+}
+.bg-images-10 {
+	background-image: url(../images/backgrounds/4860404.jpg);
+}
+.bg-images-11 {
+	background-image: url(../images/backgrounds/4858794.jpg);
+}
+.bg-images-12 {
+	background-image: url(../images/backgrounds/5128465.jpg);
+}
+.bg-images-13 {
+	background-image: url(../images/backgrounds/4907157.png);
+}
+.bg-images-14 {
+	background-image: url(../images/backgrounds/New.png);
+}
+.bg-images-15 {
+	background-image: url(../images/backgrounds/bg-15.jpg);
+}
+.bg-blue {
+	background-image: url(../images/backgrounds/bg-blue.jpg);
+}
+
+.hero-fullscreen {
+	overflow: hidden;
+}
+.content-slider .owl-item {
+	visibility: hidden;
+}
+.content-slider .owl-item.active,
+.content-slider .owl-item.animated {
+	visibility: visible;
+}
+.justify-content-center
+{
+	justify-content: center !important;
+}
