@@ -34,8 +34,8 @@
                                         <tr class="text-right fs-17">
                                             <td><?php echo e($note->id); ?></td>
                                             <td><?php echo e($note->user_id); ?></td>
-                                            <td><?php echo e($note->title); ?></td>
                                             <td><?php echo e($note->type); ?></td>
+                                            <td><?php echo e($note->title); ?></td>
                                             <td><div class="badge badge-warning"><?php echo e($note->status); ?></div></td>
                                             <td>
                                                 <a href="<?php echo e(route('notes.show', $note->id )); ?>" class="btn btn-block btn-primary">معاينة</a>

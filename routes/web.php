@@ -27,6 +27,7 @@ Route::resource('about','AboutController');
 Route::resource('member','memberController');
 Route::get('/students','HomeController@students')->name('students');
 Route::get('/coaches','HomeController@coaches')->name('coaches');
+
 Route::group(['middleware' => ['get.menu']], function () {
     Route::group(
        ['middleware' => ['role:admin'],

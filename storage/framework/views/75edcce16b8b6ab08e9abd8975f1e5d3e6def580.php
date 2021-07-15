@@ -28,16 +28,14 @@
                         <a class="nav-link" href="<?php echo e(route('blog.index')); ?>">آخر الأخبار</a>
                     </li>
                     <?php if(auth()->guard()->guest()): ?>
-                    <li class="nav-item text-right">
-                        <a class="btn btn-outline-primary text-center p-tb-7 lh-40 p-lr-35" href="<?php echo e(route('login')); ?>"  >
-                            دخول
-                        </a>
-                    </li>
-                    <li class="nav-item  text-right">
-                        <a class="btn btn-primary text-center p-tb-7 lh-40 p-lr-35" href="<?php echo e(route('register')); ?>"  >
-                            تسجيّل
-                        </a>
-                    </li>
+                        <li class="nav-item text-right d-flex my-lg-0 my-3">
+                            <a class="btn btn-outline-primary text-center p-tb-7  p-lr-35 ml-4" href="<?php echo e(route('login')); ?>"  >
+                                دخول
+                            </a>
+                            <a class="btn btn-primary text-center p-tb-7  p-lr-35 ml-4" href="<?php echo e(route('register')); ?>"  >
+                                تسجيّل
+                            </a>
+                        </li>
                     <?php else: ?>
                         <li class="nav-item p-tb-5 text-right">
                             <a href="<?php echo e(route('user.index')); ?>" class="btn btn-outline-primary text-center p-tb-7 p-lr-25" >
@@ -46,12 +44,12 @@
                         </li>
                         <li class="nav-item p-tb-5 text-right">
 
-                                <form action="<?php echo e(url('/logout')); ?>" method="POST">
-                                    <?php echo csrf_field(); ?>
-                                    <button type="submit" class="btn btn-primary text-center p-tb-7 p-lr-25 fs-18">
-                                         تسجيل الخروج
-                                    </button>
-                                </form>
+                            <form action="<?php echo e(url('/logout')); ?>" method="POST">
+                                <?php echo csrf_field(); ?>
+                                <button type="submit" class="btn btn-primary text-center p-tb-7 p-lr-25 fs-18">
+                                    تسجيل الخروج
+                                </button>
+                            </form>
                         </li>
 
                     <?php endif; ?>

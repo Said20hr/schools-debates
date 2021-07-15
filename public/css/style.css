@@ -23,8 +23,8 @@
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
   --breakpoint-xxl: 1400px;
-  --font-family-sans-serif: "Nunito", sans-serif;
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-family-sans-serif: 'Cairo', sans-serif;
+  --font-family-monospace: 'Almarai', sans-serif;
 }
 
 .c-app {
@@ -52,6 +52,7 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 21, 0);
+  font-family: 'Cairo', sans-serif;
 }
 
 article,
@@ -70,7 +71,7 @@ section {
 body {
   margin: 0;
   overflow-x: hidden;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Almarai', sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
@@ -5500,11 +5501,11 @@ html:not([dir="rtl"]) .dropleft .dropdown-toggle:empty::after {
   font-weight: 400;
   line-height: 1.6;
   background-clip: padding-box;
-  border: 1px solid;
+  border: 1px solid #bdbfbf;
   color: #768192;
   background-color: #fff;
-  border-color: #d8dbe0;
-  border-radius: 0.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.07), 0 2px 2px rgba(0,0,0,0.05);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 

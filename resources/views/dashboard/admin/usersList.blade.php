@@ -65,7 +65,6 @@
                                 <th>رقم العضوية</th>
                                 <th>الاسم الاول و الثاني</th>
                                 <th>الاسم العائلي</th>
-                                <th>البريد الالكتروني</th>
                                 <th>المهنة</th>
                                 <th>مكان العمل</th>
                                 <th>العضوية</th>
@@ -78,7 +77,6 @@
                                 <th>رقم العضوية</th>
                                 <th>الاسم الاول و الثاني</th>
                                 <th>الاسم العائلي</th>
-                                <th>البريد الالكتروني</th>
                                 <th>الصورة الشخصية</th>
                                 <th>العضوية</th>
                                 <th colspan="3">العمليات</th>
@@ -133,7 +131,6 @@
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->name." ".$user->second_name }}</td>
                                     <td>{{ $user->lastname }}</td>
-                                    <td>{{ $user->email }}</td>
                                     <td>{{ $user->job }}</td>
                                     <td>{{ $user->work_place }}</td>
                                     <td>
@@ -169,7 +166,6 @@
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->name." ".$user->second_name }}</td>
                                     <td>{{ $user->lastname }}</td>
-                                    <td>{{ $user->email }}</td>
                                     @if($user->role == 'student')
                                     <td><a href="{{asset('storage/users/students/avatars/'.$user->avatar)}}" class="fs-13 font-weight-bolder" target="_blank">اضغط للمشاهدة</a></td>
                                     @endif

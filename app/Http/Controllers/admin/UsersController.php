@@ -72,7 +72,7 @@ class UsersController extends Controller
      *  @param int $id
      *  @return \Illuminate\Contracts\Support\Renderable
      */
-    public function edit( $id )
+    public function edit($id)
     {
         $membership ='users';
 

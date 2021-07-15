@@ -22,6 +22,7 @@
 .newletter
 {
 	background-image: url(../images/backgrounds/newsletters-svg.svg);
+	background-position: top;
 	background-repeat: no-repeat;
 }
 .bg-4

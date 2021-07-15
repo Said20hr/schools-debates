@@ -61,9 +61,7 @@
 <body>
 @include('includes.header')
     <div id="app">
-        <main class="main p-lr-10-sm">
-            @yield('content')
-        </main>
+        @yield('content')
     </div>
 @include('includes.footer')
 <!-- Scripts -->

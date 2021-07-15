@@ -30,11 +30,12 @@
                 <div class="col-md-9">
                     <div class="card">
                         <div class="col-lg-12 col-md-12 col-sm-12 p-tb-14">
-                                        <h1 class="fs-30 font-weight-bolder color-1 mt-3 mx-3"> فعالياتي </h1>
-                                        <div class="separator text-center m-tb-28 mx-3"></div>
-                                        <table class="table table-striped">
+                            <h1 class="fs-24 font-weight-bolder color-1 mt-3 mx-3"> فعالياتي </h1>
+                            <div class="separator text-center m-tb-28 mx-3"></div>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
                                             <thead>
-                                            <tr class="bg-3 fs-20">
+                                            <tr class="bg-3 fs-17">
                                                 <td></td>
                                                 <td>اسم الفعالية</td>
                                                 <td>تاريخ</td>
@@ -46,10 +47,10 @@
                                             <tbody>
                                             @foreach($events as $event)
                                                 <tr>
-                                                    <td class="fs-20 pt-3">{{$event->index+1}}</td>
-                                                    <td class="fs-18 pt-3">{{$event->event->name}}</td>
-                                                    <td class="fs-18 pt-3">{{$event->event->date}}</td>
-                                                    <td class="fs-18 pt-3">
+                                                    <td class="fs-17 pt-3">{{$event->index+1}}</td>
+                                                    <td class="fs-17 pt-3">{{$event->event->name}}</td>
+                                                    <td class="fs-17 pt-3">{{$event->event->date}}</td>
+                                                    <td class="fs-17 pt-3">
                                                         @if($event->event->case)
                                                             <div class="badge badge-success fs-18 p-lr-7 p-tb-5">مفتوحة</div>
                                                         @else
@@ -60,13 +61,15 @@
                                             @endforeach
                                             </tbody>
                                         </table>
-                                    </div>
+                            </div>
+                        </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 p-tb-14">
-                            <h1 class="fs-30 font-weight-bolder color-1 mt-3 mx-3"> مشاركاتي </h1>
+                            <h1 class="fs-24 font-weight-bolder color-1 mt-3 mx-3"> مشاركاتي </h1>
                             <div class="separator text-center m-tb-28 mx-3"></div>
+                            <div class="table-responsive">
                             <table class="table table-striped">
                                 <thead>
-                                <tr class="bg-3 fs-20">
+                                <tr class="bg-3 fs-17">
                                     <td></td>
                                     <td>المشاركة</td>
                                     <td>نوع المشاركة</td>
@@ -76,10 +79,10 @@
                                 <tbody>
                                 @foreach($tournaments as $tournament)
                                     <tr>
-                                        <td class="fs-20 pt-3">{{$tournament->index+1}}</td>
-                                        <td class="fs-18 pt-3">{{$tournament->name}}</td>
-                                        <td class="fs-18 pt-3">{{$tournament->type}}</td>
-                                        <td class="fs-18 pt-3">
+                                        <td class="fs-17 pt-3">{{$tournament->index+1}}</td>
+                                        <td class="fs-17 pt-3">{{$tournament->name}}</td>
+                                        <td class="fs-17 pt-3">{{$tournament->type}}</td>
+                                        <td class="fs-17 pt-3">
                                             @if($tournament->feature)
                                                 <div class="badge badge-success fs-18 p-lr-7 p-tb-5"><i class="fa fa-star cl11"></i>متميزة</div>
                                             @else
@@ -89,6 +92,7 @@
                                 @endforeach
                                 </tbody>
                             </table>
+                            </div>
                         </div>
                     </div>
                 </div>

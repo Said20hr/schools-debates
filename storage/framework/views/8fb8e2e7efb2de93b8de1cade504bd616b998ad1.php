@@ -61,9 +61,7 @@
 <body>
 <?php echo $__env->make('includes.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <div id="app">
-        <main class="main p-lr-10-sm">
-            <?php echo $__env->yieldContent('content'); ?>
-        </main>
+        <?php echo $__env->yieldContent('content'); ?>
     </div>
 <?php echo $__env->make('includes.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <!-- Scripts -->

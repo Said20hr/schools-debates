@@ -1,12 +1,12 @@
 <?php $__env->startSection('content'); ?>
 
     <div class="container p-t-56 p-b-112"  dir="rtl">
-        <div class="text-center p-b-60 p-t-28">
-            <h1 class="font-weight-bold">  سجل الدخول لحسابك  في مناظرات المدارس</h1>
+        <div class="text-center p-b-50 p-t-28">
+            <h1 class="fs-30 font-weight-bolder color-1">  سجل الدخول لحسابك  في مناظرات المدارس</h1>
         </div>
 
       <div class="row justify-content-center">
-        <div class="col-md-7 justify-content-center no-gutters bor-r5 p-0">
+        <div class="col-md-7 justify-content-center no-gutters bor-r5 p-lr-15-sm">
             <div class="p-t-28 text-right">
                 <?php if(session()->has('success_message')): ?>
                     <div class="alert alert-success fs-20"><?php echo e(session()->get('success_message')); ?></div>
@@ -15,12 +15,12 @@
                     <div class="alert alert-danger fs-20"><?php echo e(session()->get('error_message')); ?></div>
                 <?php endif; ?>
             </div>
-          <div class="card-group ">
+          <div class="card-group">
             <div class="card bor-r5 ">
                 <div class="card-header bg-primary p-tb-24 text-center" >
                     <div class="text-center font-weight-bolder fs-22 m-lr-56 text-white">سجل الدخول</div>
                 </div>
-                <div class="card-body p-t-60 p-b-40 text-right p-lr-56" >
+                <div class="card-body p-t-60 p-b-40 text-right " >
                     <form method="POST" action="<?php echo e(route('login')); ?>">
                     <?php echo csrf_field(); ?>
                     <div class="col-md-12 mb-4">

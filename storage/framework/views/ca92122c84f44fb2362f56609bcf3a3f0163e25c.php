@@ -123,7 +123,7 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>" type="text"
-                                                                       name="region" value="<?php echo e($user->region); ?>">
+                                                                       name="region" value="<?php echo e(old('region')); ?>">
                                                             </div>
                                                             <?php $__errorArgs = ['region'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -149,7 +149,7 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>" type="text"
-                                                                           name="province" value="<?php echo e($user->province); ?>"  >
+                                                                           name="province" value="<?php echo e(old('province')); ?>"  >
                                                                 </div>
                                                                 <?php $__errorArgs = ['province'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -175,7 +175,7 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>" type="text"
-                                                                           name="rue" value="<?php echo e($user->rue); ?>"  >
+                                                                           name="rue" value="<?php echo e(old('rue')); ?>"  >
                                                                 </div>
                                                                 <?php $__errorArgs = ['rue'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -201,7 +201,7 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>" type="text"
-                                                                       name="commune" value="<?php echo e($user->commune); ?>"  >
+                                                                       name="commune" value="<?php echo e(old('commune')); ?>"  >
                                                             </div>
                                                             <?php $__errorArgs = ['commune'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -227,7 +227,7 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>" type="text"
-                                                                       name="house" value="<?php echo e($user->house); ?>">
+                                                                       name="house" value="<?php echo e(old('house')); ?>">
                                                             </div>
                                                             <?php $__errorArgs = ['house'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');

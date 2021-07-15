@@ -64,7 +64,6 @@
                                 <th>رقم العضوية</th>
                                 <th>الاسم الاول و الثاني</th>
                                 <th>الاسم العائلي</th>
-                                <th>البريد الالكتروني</th>
                                 <th>المهنة</th>
                                 <th>مكان العمل</th>
                                 <th>العضوية</th>
@@ -77,7 +76,6 @@
                                 <th>رقم العضوية</th>
                                 <th>الاسم الاول و الثاني</th>
                                 <th>الاسم العائلي</th>
-                                <th>البريد الالكتروني</th>
                                 <th>الصورة الشخصية</th>
                                 <th>العضوية</th>
                                 <th colspan="3">العمليات</th>
@@ -132,7 +130,6 @@
                                     <td><?php echo e($user->id); ?></td>
                                     <td><?php echo e($user->name." ".$user->second_name); ?></td>
                                     <td><?php echo e($user->lastname); ?></td>
-                                    <td><?php echo e($user->email); ?></td>
                                     <td><?php echo e($user->job); ?></td>
                                     <td><?php echo e($user->work_place); ?></td>
                                     <td>
@@ -168,7 +165,6 @@
                                     <td><?php echo e($user->id); ?></td>
                                     <td><?php echo e($user->name." ".$user->second_name); ?></td>
                                     <td><?php echo e($user->lastname); ?></td>
-                                    <td><?php echo e($user->email); ?></td>
                                     <?php if($user->role == 'student'): ?>
                                     <td><a href="<?php echo e(asset('storage/users/students/avatars/'.$user->avatar)); ?>" class="fs-13 font-weight-bolder" target="_blank">اضغط للمشاهدة</a></td>
                                     <?php endif; ?>
