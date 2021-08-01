@@ -32,7 +32,7 @@
                                            <label for="name" class="form-label fs-15 pb-2 p-r-10 clblack">الأسم * </label>
                                            <div class="input-group mb-2">
                                                <input id="name" class="form-control @error('name') is-invalid @enderror" type="text" 
-                                                      placeholder="{{ __('اكتب أسمك هنا') }}" name="name" value="{{ old('name') }}" required autofocus>
+                                                      placeholder="{{ __('اكتب أسمك هنا') }}" name="name" value="{{ Auth::user() ? Auth::user()->name :  old('name') }}" {{Auth::user()? 'disabled' :'required' }} autofocus>
                                            </div>
                                            @error('name')
                                            <div class="text-danger mb-2" role="alert">
@@ -43,7 +43,8 @@
                                        <div class="col-md-6 mb-3">
                                            <label for="phone" class="form-label fs-15 pb-2 p-r-10 clblack">رقم الهاتف * </label>
                                            <div class="input-group mb-3">
-                                               <input id="phone" class="form-control  @error('phone') is-invalid @enderror" type="text" placeholder="{{ __('أكتب رقم الهاتف هنا') }}" name="phone" value="{{ old('phone') }}" autofocus  required>
+                                               <input id="phone" class="form-control  @error('phone') is-invalid @enderror" type="text" placeholder="{{ __('أكتب رقم الهاتف هنا') }}" name="phone"
+                                                      value="{{Auth::user() ? Auth::user()->phone :  old('phone') }}" autofocus  {{Auth::user() ? 'disabled' :'required' }}>
                                            </div>
                                            @error('phone')
                                            <div class="text-danger mb-2" role="alert">
@@ -55,7 +56,7 @@
                                            <label for="email" class="form-label fs-15 pb-2 p-r-10 clblack">البريد الإلكتروني * </label>
                                            <div class="input-group mb-3">
                                                <input id="email" class="form-control @error('email') is-invalid @enderror" type="text" placeholder="{{ __('example@example.com') }}"
-                                                      name="email" value="{{ old('email') }}" autofocus required>
+                                                      name="email" value="{{ Auth::user() ? Auth::user()->email :  old('email') }}" autofocus {{Auth::user()? 'disabled' :'required' }}>
                                            </div>
                                            @error('email')
                                            <div class="text-danger mb-2" role="alert">
@@ -108,7 +109,7 @@
                                             </div>
                                             <div class="cn-info-content p-t-7">
                                                 <h4 class="fs-22 font-weight-bold color-1 mb-2">العنوان</h4>
-                                                2512, New Market,Eliza Road, Sincher 80 CA Canada, USA
+                                                {{$content->address}}
                                             </div>
                                         </div>
 
@@ -118,7 +119,7 @@
                                             </div>
                                             <div class="cn-info-content p-t-7">
                                                 <h4 class="fs-22 font-weight-bold color-1 mb-2">البريد الإلكتروني</h4>
-                                                support@Rikada.com<br>Rikada@gmail.com
+                                                {{$content->email_1}}<br>  {{$content->email_2}}
                                             </div>
                                         </div>
 
@@ -128,7 +129,7 @@
                                             </div>
                                             <div class="cn-info-content p-t-7">
                                                 <h4 class="fs-22 font-weight-bold color-1 mb-2">رقم الهاتف</h4>
-                                                (41) 123 521 458<br>+91 235 548 7548
+                                                {{$content->phone_2}}<br>  {{$content->phone_1}}
                                             </div>
                                         </div>
 

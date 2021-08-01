@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
+use App\Models\Event;
 use App\Models\EventsUsers;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class EventUsersController extends Controller
@@ -35,7 +37,7 @@ class EventUsersController extends Controller
      */
     public function create()
     {
-        //
+       //
     }
 
     /**
@@ -46,7 +48,22 @@ class EventUsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+       $event = Event::findOrFail($request->event);
+       foreach ($request->participants as $par)
+       {
+           $exist = EventsUsers::where('user_id',$par)
+               ->where('event_id',$event->id)->exists();
+           if (!$exist)
+           {
+               EventsUsers::create([
+                   'user_id' =>$par,
+                   'event_id' =>$event->id,
+               ]);
+           }
+
+       }
+       return redirect()->back()->with('success_mesage','لقد تم تسجيل المتفاعلين التفاعلية بنجاح');
     }
 
     /**
@@ -81,6 +98,13 @@ class EventUsersController extends Controller
     public function update(Request $request, $id)
     {
         //
+    }
+    public function register ($id)
+    {
+        $users = User::where('role','=','student')->where('status',true)->get();
+        $event=Event::findOrfail($id);
+
+        return view('dashboard.events.register',compact('event','users'));
     }
 
     /**

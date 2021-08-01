@@ -42,7 +42,7 @@ Route::group(['middleware' => ['get.menu']], function () {
            Route::resource('coaches',        'admin\CoachesController');
            Route::resource('roles',        'admin\RolesController');
            Route::resource('members',        'admin\membersController');
-           //Route::resource('mail',        'MailController');
+           Route::resource('mail',        'MailController');
            Route::resource('events',        'admin\EventController');
            Route::resource('eventsUsers',        'admin\EventUsersController');
            Route::resource('tournament', 'admin\TournementController');
@@ -51,11 +51,9 @@ Route::group(['middleware' => ['get.menu']], function () {
            Route::resource('homepageContent', 'admin\homepageController');
            Route::resource('faqs', 'admin\faqController');
            Route::resource('notes', 'admin\NotesController');
-
+           Route::get('/register/event/{id}','admin\EventUsersController@register')->name('event.register');
            Route::get('prepareSend/{id}',        'MailController@prepareSend')->name('prepareSend');
            Route::post('mailSend/{id}',        'MailController@send')->name('mailSend');
-           Route::get('/roles/move/move-up',      'RolesController@moveUp')->name('roles.up');
-           Route::get('/roles/move/move-down',    'RolesController@moveDown')->name('roles.down');
 
            Route::prefix('menu/element')->group(function () {
                Route::get('/',             'MenuElementController@index')->name('menu.index');

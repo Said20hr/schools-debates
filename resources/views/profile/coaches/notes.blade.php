@@ -10,7 +10,11 @@
                     <div class="card">
                         <div class="text-center p-tb-28 bor4"  style=" box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);">
                             <div class="pos-relative d-inline-block p-lr-10">
-                                <img src="{{asset('storage/users/coach/avatars/'.$user->avatar)}}" alt="" class="img-blog-avatar3">
+                                @if($user->avatar)
+                                    <img src="{{asset('storage/users/coach/avatars/'.$user->avatar)}}" alt="" class="img-blog-avatar3">
+                                @else
+                                    <img src="{{asset('images/Placeholder/avatar2.svg')}}" alt="" class="img-blog-avatar3">
+                                @endif
                                 <span class="avatar-check pointer" data-toggle="tooltip" data-placement="right" title="عضوية مفعلة"><i class="ti-check font-weight-bolder" ></i></span>
                             </div>
                             <div class="">
@@ -31,9 +35,10 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 p-tb-14">
                             <h1 class="fs-30 font-weight-bolder color-1 mt-3 mx-3"> ملاحظات المتناظرين </h1>
                             <div class="separator text-center m-tb-28 mx-3"></div>
+                            <div class="table-responsive">
                             <table class="table table-striped">
                                 <thead>
-                                <tr class="bg-3 fs-20">
+                                <tr class="bg-3 fs-16" aria-colspan="true">
                                     <th>رقم </th>
                                     <th>اسم المتناظر</th>
                                     <th>نوع الملاحظة</th>
@@ -43,8 +48,8 @@
                                 </thead>
                                 <tbody>
                                 @foreach($notes as $note)
-                                    <tr>
-                                        <td>{{ $note->id }}</td>
+                                    <tr class="fs-14">
+                                        <td>{{ $note->id }}#</td>
                                         <td>{{ $note->user_id }}</td>
                                         <td>{{ $note->type }}</td>
                                         <td>{{ $note->title }}</td>
@@ -53,6 +58,7 @@
                                 @endforeach
                                 </tbody>
                             </table>
+                            </div>
                         </div>
                     </div>
                 </div>

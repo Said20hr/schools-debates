@@ -24,7 +24,7 @@ class faqController extends Controller
      */
     public function index()
     {
-     dd('faq controller for index');
+     //dd('faq controller for index');
     }
 
     /**

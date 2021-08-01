@@ -161,7 +161,6 @@ class UsersController extends Controller
                     'region' => ['required', 'string'],
                     'province' => ['required', 'string'],
                     'rue' => ['required', 'string'],
-                    'commune' => ['string'],
                     'house' => ['required', 'string'],
                     'avatar' => ['image', 'mimes:jpeg,png,jpg,gif,svg|max:512'],
                 ]);

@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="مناظرات المدارس">
-    <meta name="author" content="">
+    <meta name="description" content="schools debates | مناظرات المدارس">
+    <meta name="author" content="schools debates">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
     <!--===============================================================================================-->
@@ -65,7 +65,7 @@
     </div>
 <?php echo $__env->make('includes.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <!-- Scripts -->
-<script src="<?php echo e(asset('vendor/jquery/jquery.min.js')); ?>"></script>
+
 <script src="<?php echo e(asset('vendor/bootstrap/js/bootstrap.bundle.min.js')); ?>"></script>
 <script src="<?php echo e(asset('vendor/jquery/jquery-3.2.1.min.js')); ?>"></script>
 <script src="<?php echo e(asset('https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')); ?>"></script>

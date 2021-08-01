@@ -10,7 +10,11 @@
                     <div class="card">
                         <div class="text-center p-tb-28 bor4"  style=" box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);">
                             <div class="pos-relative d-inline-block p-lr-10">
-                                <img src="{{asset('storage/users/student/avatars/'.$user->avatar)}}" alt="" class="img-blog-avatar3">
+                                @if($user->avatar)
+                                    <img src="{{asset('storage/users/'.$user->role.'/avatars/'.$user->avatar)}}" alt="" class="img-blog-avatar3">
+                                @else
+                                    <img src="{{asset('images/Placeholder/avatar2.svg')}}" alt="" class="img-blog-avatar3">
+                                @endif
                                 <span class="avatar-check pointer" data-toggle="tooltip" data-placement="right" title="عضوية مفعلة"><i class="ti-check font-weight-bolder" ></i></span>
                             </div>
                             <div class="">

@@ -13,10 +13,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="description" content="">
+    <meta name="description" content="schools debates">
     <meta name="author" content="">
     <meta name="keyword" content="">
-    <title>Schools Debates</title>
+    <title>Schools Debates </title>
       <!--===============================================================================================-->
       <link rel="apple-touch-icon" sizes="180x180" href="<?php echo e(asset('favicon/apple-touch-icon.png')); ?>">
       <link rel="icon" type="image/png" sizes="32x32" href="<?php echo e(asset('favicon/favicon-32x32.png')); ?>">
@@ -62,17 +62,13 @@
 
 
     <!-- CoreUI and necessary plugins-->
-    <script src="<?php echo e(asset('js/coreui.bundle.min.js')); ?>"></script>
-    <script src="https://kit.fontawesome.com/c729ebc618.js" crossorigin="anonymous"></script>
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-    <script src="<?php echo e(asset('https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')); ?>"></script>
-    <script src="<?php echo e(asset('/dist/js/bootstrap.bundle.min.js')); ?>"></script>
-    <script src="<?php echo e(asset('/dist/src/bootoast.js')); ?>"></script>
-    <script src="<?php echo e(asset('js/script.js')); ?>"></script>
-    <script src="<?php echo e(asset('js/app.js')); ?>"></script>
-    <script src="<?php echo e(asset('js/vue.js')); ?>"></script>
+  <script src="<?php echo e(asset('vendor/bootstrap/js/bootstrap.bundle.min.js')); ?>"></script>
+  <script src="<?php echo e(asset('vendor/jquery/jquery-3.2.1.min.js')); ?>"></script>
+  <script src="<?php echo e(asset('https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')); ?>"></script>
+  <script src="<?php echo e(asset('/dist/src/bootoast.js')); ?>"></script>
+  <script src="<?php echo e(asset('js/vue.js')); ?>"></script>
+  <script src="<?php echo e(asset('js/app.js')); ?>"></script>
+  <script src="<?php echo e(asset('js/script.js')); ?>"></script>
 
 
     <?php echo $__env->yieldContent('javascript'); ?>

@@ -1,5 +1,5 @@
 <?php $__env->startSection('content'); ?>
-    <div class="home-hero bg-images-13 p-tb-10-md p-tb-5-sm">
+    <div class="home-hero bg-images-13 py-5">
 
         <div class="container p-tb-112">
 
@@ -8,7 +8,11 @@
                     <div class="card">
                         <div class="text-center p-tb-28 bor4"  style=" box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);">
                             <div class="pos-relative d-inline-block p-lr-10">
-                                <img src="<?php echo e(asset('storage/users/'.$user->role.'/avatars/'.$user->avatar)); ?>" alt="" class="img-blog-avatar3">
+                                <?php if($user->avatar): ?>
+                                    <img src="<?php echo e(asset('storage/users/'.$user->role.'/avatars/'.$user->avatar)); ?>" alt="" class="img-blog-avatar3">
+                                <?php else: ?>
+                                    <img src="<?php echo e(asset('images/Placeholder/avatar2.svg')); ?>" alt="" class="img-blog-avatar3">
+                                <?php endif; ?>
                                 <span class="avatar-check pointer" data-toggle="tooltip" data-placement="right" title="عضوية مفعلة"><i class="ti-check font-weight-bolder" ></i></span>
                             </div>
                             <div class="">
@@ -20,21 +24,21 @@
                         <div class="nav flex-column text-right" >
                             <a href="<?php echo e(route('user.index')); ?>" class="border-0 nav-link  p-tb-14 fs-17 font-weight-bolder text-right active text-white"><i class="fa fa-user m-lr-10"></i>ملفي الشخصي</a>
                             <?php if($user->role =='student'): ?>
-                            <a href="<?php echo e(route('user.events')); ?>" class="border-0 nav-link p-tb-14 fs-17 font-weight-bolder text-right color-1"><i class="fa fa-calendar m-lr-10"></i>  فعالياتي </a>
-                            <a href="<?php echo e(route('user.notes')); ?>" class="border-0 nav-link p-tb-14 fs-17 font-weight-bolder text-right color-1"><i class="fa fa-bell m-lr-10"></i> الملاحظات </a>
-                            <?php else: ?>
-                            <a href="<?php echo e(route('users.notes')); ?>" class="border-0 nav-link p-tb-14 fs-17 font-weight-bolder text-right color-1"><i class="fa fa-calendar m-lr-10"></i> ملاحظات المتناظرين </a>
+                                <a href="<?php echo e(route('user.events')); ?>" class="border-0 nav-link p-tb-14 fs-17 font-weight-bolder text-right color-1"><i class="fa fa-calendar m-lr-10"></i>  فعالياتي </a>
+                                <a href="<?php echo e(route('user.notes')); ?>" class="border-0 nav-link p-tb-14 fs-17 font-weight-bolder text-right color-1"><i class="fa fa-bell m-lr-10"></i> الملاحظات </a>
+                            <?php endif; ?>
+                            <?php if($user->role =='coach'): ?>
+                                <a href="<?php echo e(route('users.notes')); ?>" class="border-0 nav-link p-tb-14 fs-17 font-weight-bolder text-right color-1"><i class="fa fa-calendar m-lr-10"></i> ملاحظات المتناظرين </a>
+                            <?php endif; ?>
+                            <?php if($user->role =='admin'): ?>
+                                <a href="<?php echo e(route('admin')); ?>" class="border-0 nav-link p-tb-14 fs-17 font-weight-bolder text-right color-1"><i class="fa fa-external-link m-lr-10"></i> منصة الادمين </a>
                             <?php endif; ?>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-9">
-                    <div class="card">
-                        <div class="d-flex align-items-start">
-                            <div>
-                                <div style=" box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" >
+                    <div class="d-block card" style=" box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);">
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" >
                                         <div class="card p-tb-7">
                                             <div class="card-header p-tb-10 fs-20 font-weight-bolder color-1"><?php echo e(__('تعديل الملف الشخصي')); ?> </div>
                                             <div class="card-body text-right ">
@@ -48,7 +52,7 @@
                                                 <form method="POST" action="<?php echo e(route('user.update',$user->id)); ?>" dir="rtl" enctype="multipart/form-data">
                                                     <?php echo csrf_field(); ?>
                                                     <?php echo method_field('PUT'); ?>
-                                                    <div class="row mb-2 p-lr-24">
+                                                    <div class="row mb-2 p-lr-14">
                                                         <div class="col-md-4 mb-1">
                                                             <label  class="form-label fs-16  pb-2 p-r-10">الاسم الاول  </label>
                                                             <div class="input-group mb-3">
@@ -69,7 +73,7 @@
                                                         </div>
 
                                                     </div>
-                                                    <div class="row mb-2 p-lr-24">
+                                                    <div class="row mb-2 p-lr-14">
                                                         <div class="col-md-4 mb-1">
                                                             <label for="birth_date" class="form-label fs-16  pb-2 p-r-10">تاريخ المبلاد  </label>
                                                             <div class="input-group mb-3">
@@ -110,12 +114,12 @@
                                                     </div>
                                                     <hr class="mb-3">
                                                     <?php if(!$user->region): ?>
-                                                    <div class="mb-4 p-lr-20 border-bottom p-b-14 fs-20 font-weight-bolder color-1"><?php echo e(__('بيانات السكن')); ?> </div>
-                                                    <div class="row mb-2 p-lr-24">
-                                                        <div class="col-md-4 mb-1">
-                                                            <label for="region" class="form-label fs-16  pb-2 p-r-10">المنطقه</label>
-                                                            <div class="input-group mb-3">
-                                                                <input id="region" class="form-control <?php $__errorArgs = ['region'];
+                                                        <div class="mb-4 p-lr-20 border-bottom p-b-14 fs-20 font-weight-bolder color-1"><?php echo e(__('بيانات السكن')); ?> </div>
+                                                        <div class="row mb-2 p-lr-14">
+                                                            <div class="col-md-4 mb-1">
+                                                                <label for="region" class="form-label fs-16  pb-2 p-r-10">المنطقه</label>
+                                                                <div class="input-group mb-3">
+                                                                    <input id="region" class="form-control <?php $__errorArgs = ['region'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -123,22 +127,22 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>" type="text"
-                                                                       name="region" value="<?php echo e(old('region')); ?>">
-                                                            </div>
-                                                            <?php $__errorArgs = ['region'];
+                                                                           name="region" value="<?php echo e(old('region')); ?>">
+                                                                </div>
+                                                                <?php $__errorArgs = ['region'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?>
-                                                            <div class="text-danger mb-2" role="alert">
-                                                                <strong><?php echo e($message); ?></strong>
-                                                            </div>
-                                                            <?php unset($message);
+                                                                <div class="text-danger mb-2" role="alert">
+                                                                    <strong><?php echo e($message); ?></strong>
+                                                                </div>
+                                                                <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
-                                                        </div>
-                                                        <div class="col-md-4 mb-1">
+                                                            </div>
+                                                            <div class="col-md-4 mb-1">
                                                                 <label for="province" class="form-label fs-16  pb-2 p-r-10">القطعه  </label>
                                                                 <div class="input-group mb-3">
                                                                     <input id="province" class="form-control <?php $__errorArgs = ['province'];
@@ -190,10 +194,10 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
                                                             </div>
-                                                        <div class="col-md-4 mb-1">
-                                                            <label for="commune" class="form-label fs-16  pb-2 p-r-10">جاده ( اختياري )  </label>
-                                                            <div class="input-group mb-3">
-                                                                <input id="commune" class="form-control <?php $__errorArgs = ['commune'];
+                                                            <div class="col-md-4 mb-1">
+                                                                <label for="commune" class="form-label fs-16  pb-2 p-r-10">جاده ( اختياري )  </label>
+                                                                <div class="input-group mb-3">
+                                                                    <input id="commune" class="form-control <?php $__errorArgs = ['commune'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -201,25 +205,25 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>" type="text"
-                                                                       name="commune" value="<?php echo e(old('commune')); ?>"  >
-                                                            </div>
-                                                            <?php $__errorArgs = ['commune'];
+                                                                           name="commune" value="<?php echo e(old('commune')); ?>"  >
+                                                                </div>
+                                                                <?php $__errorArgs = ['commune'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?>
-                                                            <div class="text-danger mb-2" role="alert">
-                                                                <strong><?php echo e($message); ?></strong>
-                                                            </div>
-                                                            <?php unset($message);
+                                                                <div class="text-danger mb-2" role="alert">
+                                                                    <strong><?php echo e($message); ?></strong>
+                                                                </div>
+                                                                <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
-                                                        </div>
-                                                        <div class="col-md-4 mb-1">
-                                                            <label for="house" class="form-label fs-16  pb-2 p-r-10">منزل  </label>
-                                                            <div class="input-group mb-3">
-                                                                <input id="house" class="form-control <?php $__errorArgs = ['house'];
+                                                            </div>
+                                                            <div class="col-md-4 mb-1">
+                                                                <label for="house" class="form-label fs-16  pb-2 p-r-10">منزل  </label>
+                                                                <div class="input-group mb-3">
+                                                                    <input id="house" class="form-control <?php $__errorArgs = ['house'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -227,25 +231,25 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>" type="text"
-                                                                       name="house" value="<?php echo e(old('house')); ?>">
-                                                            </div>
-                                                            <?php $__errorArgs = ['house'];
+                                                                           name="house" value="<?php echo e(old('house')); ?>">
+                                                                </div>
+                                                                <?php $__errorArgs = ['house'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?>
-                                                            <div class="text-danger mb-2" role="alert">
-                                                                <strong><?php echo e($message); ?></strong>
-                                                            </div>
-                                                            <?php unset($message);
+                                                                <div class="text-danger mb-2" role="alert">
+                                                                    <strong><?php echo e($message); ?></strong>
+                                                                </div>
+                                                                <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <hr class="mb-4">
+                                                        <hr class="mb-4">
                                                     <?php endif; ?>
-                                                    <div class="row mb-2 p-lr-24">
+                                                    <div class="row mb-2 p-lr-14">
                                                         <div class="col-md-6 mb-2">
                                                             <label for="name" class="form-label fs-16  pb-2 p-r-10">البريد الالكتروني</label>
                                                             <input id="email" class="form-control" type="text"  value="<?php echo e(auth()->user()->email); ?>"  disabled>
@@ -260,7 +264,7 @@ unset($__errorArgs, $__bag); ?>
                                                         </div>
                                                     </div>
                                                     <hr class="mb-4">
-                                                    <div class="row mb-2 p-lr-24">
+                                                    <div class="row mb-2 p-lr-14">
                                                         <div class="col-md-6 mb-2 text-center">
                                                             <label for="id_carte" class="form-label fs-16 pb-2 p-r-10">البطاقة المدنية  </label>
                                                             <div class="d-flex justify-content-center p-tb-14">
@@ -271,7 +275,7 @@ unset($__errorArgs, $__bag); ?>
                                                                 <?php else: ?>
                                                                     <div>
                                                                         <div>
-                                                                            <h3 class="badge fs-22 badge-light">صورة البطاقة المدنية خاطئة او غير موجودة</h3>
+                                                                            <h3 class="badge fs-16 badge-light">صورة البطاقة المدنية خاطئة او غير موجودة</h3>
                                                                         </div>
                                                                     </div>
                                                                 <?php endif; ?>
@@ -288,7 +292,7 @@ unset($__errorArgs, $__bag); ?>
                                                                     </div>
                                                                 <?php else: ?>
                                                                     <div>
-                                                                        <h3 class="badge fs-22 badge-light">الصورة الشخصية خاطئة او غير موجودة</h3>
+                                                                        <div class="badge fs-16 badge-light">الصورة الشخصية خاطئة او غير موجودة</div>
                                                                     </div>
                                                                 <?php endif; ?>
                                                             </div>
@@ -301,7 +305,7 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?> p-tb-12" id="avatar" type="file" name="avatar" placeholder="">
+unset($__errorArgs, $__bag); ?> p-tb-12 p-lr-20" id="avatar" type="file" name="avatar" placeholder="">
                                                                 </div>
                                                                 <?php $__errorArgs = ['avatar'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -321,7 +325,7 @@ unset($__errorArgs, $__bag); ?>
                                                     </div>
                                                     <hr class="mb-4">
                                                     <div class="d-flex justify-content-start">
-                                                        <button class="btn col-md-2 btn-lg fs-20 fw-bolder btn-success p-tb-10 m-l-10" type="submit"><?php echo e(__('حفظ')); ?></button>
+                                                        <button class="btn col-md-2 btn-lg fs-20 fw-bolder btn-success p-tb-10 m-l-10 bor-r5" type="submit"><?php echo e(__('حفظ')); ?></button>
                                                         <a href="" class="btn col-md-2 btn-lg fs-20 fw-bolder btn-primary p-tb-10 m-r-10"><?php echo e(__('العودة')); ?></a>
                                                     </div>
 
@@ -329,9 +333,6 @@ unset($__errorArgs, $__bag); ?>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

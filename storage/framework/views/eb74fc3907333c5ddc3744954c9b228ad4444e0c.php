@@ -1,23 +1,22 @@
 <?php $__env->startSection('content'); ?>
-    <div class="home-hero bg-images-13">
+    <div class="home-hero bg-images-13 px-sm-2 px-md-0 px-lg-0">
         <div class="text-right container p-t-100 p-b-50">
-            <div class="row d-flex align-items-end pt-xl-5">
+            <div class="row d-flex align-items-end pt-xl-5 ">
                 <div class="col-lg-7 col-md-12 col-sm-12 order-md-2 order-lg-1">
-                    <h1 class="fs-34 font-weight-bolder color-1">عنوان رئيسي</h1>
-                    <div class="separator text-center m-tb-28"></div>
+                    <h1 class="fs-30 font-weight-bolder color-1"><?php echo e($content->title_1); ?></h1>
+                    <div class="separator text-center m-t-14 m-b-28"></div>
                     <p class="fs-18">
-                        "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيومود تيمبور
-                        أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد
-                        أكسير سيتاشن يللأمكو لابورأس نيسي يت أليكيوب أكس أيا كوممودو كونسيكيوات
+                        <?php echo e($content->text_1); ?>
+
                     </p>
-                    <div class="p-t-10 p-tb-10-sm d-flex m-b-14">
+                    <div class="p-t-10 p-tb-10-sm d-flex m-b-14 align-items-sm-end">
                         <div class="col-md-5 col-sm-2 p-tb-5-sm">
-                            <a href="<?php echo e(route('events.index')); ?>" class="btn btn-primary p-lr-25 p-tb-10 fs-20 font-weight-bold p-tb-5-sm">
+                            <a href="<?php echo e(route('events.index')); ?>" class="btn btn-primary p-lr-25 p-tb-10 fs-18 font-weight-bold p-tb-5-sm">
                                 اطلع
                             </a>
                         </div>
                         <div class="col-md-5 col-sm-2 p-tb-5-sm">
-                            <a href="<?php echo e(route('events.index')); ?>" class="btn btn-outline-primary p-lr-25 p-tb-10 fs-20 font-weight-bold p-tb-5-sm" >
+                            <a href="<?php echo e(route('events.index')); ?>" class="btn btn-outline-primary p-lr-25 p-tb-10 fs-18 font-weight-bold p-tb-5-sm" >
                                  التفاعليات
                             </a>
                         </div>
@@ -33,37 +32,37 @@
         <section class="container ">
                 <div class="row text-right">
                     <div class="col-lg-4 col-md-4 col-sm-12 p-tb-14">
-                        <div class="trips d-flex justify-content-between align-items-start p-tb-14 p-lr-28">
-                            <div class="p-t-14 m-t-20 trips_icons">
+                        <div class="trips d-flex justify-content-between align-items-center p-tb-14 p-lr-14">
+                            <div class="m-t-10 trips_icons">
                                 <img src="<?php echo e(asset('images/Icons/icon1.svg')); ?>" alt="icons" class="img-fluid" width="100">
                             </div>
                             <div class="m-t-14 p-lr-10 p-lr-0-sm">
                                 <h4 class="fw-bold"><?php echo e($students_count); ?> متناظر</h4>
-                                <p class="fs-17">لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت</p>
+                                <p class="fs-16"><?php echo e($content->note_1); ?></p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-4 col-sm-12 p-tb-14">
-                        <div class="trips d-flex justify-content-between align-items-start p-tb-14 p-lr-28">
-                            <div class="p-t-14 m-t-20 trips_icons">
+                        <div class="trips d-flex justify-content-between align-items-center p-tb-14 p-lr-14">
+                            <div class="m-t-10 trips_icons">
                                 <img src="<?php echo e(asset('images/Icons/icon2.svg')); ?>" alt="icons" class="img-fluid" width="100">
                             </div>
                             <div class="m-t-14 p-lr-10 p-lr-0-sm">
                                 <h4 class="fw-bold"><?php echo e($coaches_count); ?> مدرب</h4>
-                                <p class="fs-17">لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت</p>
+                                <p class="fs-16"><?php echo e($content->note_2); ?></p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-4 col-sm-12 p-tb-14">
-                        <div class="trips d-flex justify-content-between align-items-start p-tb-14 p-lr-28">
-                            <div class="p-t-14 m-t-20 trips_icons">
+                        <div class="trips d-flex justify-content-between align-items-center p-tb-14 p-lr-14">
+                            <div class="m-t-10 trips_icons">
                                 <img src="<?php echo e(asset('images/Icons/icon3.svg')); ?>" alt="icons" class="img-fluid" width="100">
                             </div>
                             <div class="m-t-14 p-lr-10 p-lr-0-sm">
                                 <h4 class="fw-bold"> <?php echo e($event_count); ?> تفاعلية</h4>
-                                <p class="fs-17">لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت</p>
+                                <p class="fs-16"><?php echo e($content->note_3); ?></p>
                             </div>
                         </div>
                     </div>
@@ -77,16 +76,13 @@
                     <img class="img-fluid" src="<?php echo e(asset('images/13260.svg')); ?>" alt="">
                 </div>
                 <div class="col-lg-8 text-right p-tb-20 order-xl-2 order-lg-2 order-sm-1">
-                    <h1 class="color-2 fs-34 fw-bolder p-b-20 p-r-10">عنوان :</h1>
+                    <h1 class="color-2 fs-30 fw-bolder p-b-20 p-r-10"><?php echo e($content->title_2); ?> :</h1>
                     <p class="fs-18 lh-17 p-l-28">
-                        "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور
-                        أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد
-                        أكسير سيتاشن يللأمكو لابورأس نيسي يت أليكيوب أكس أيا كوممودو كونسيكيوات
-                        أكسير سيتاشن يللأمكو لابورأس نيسي يت أليكيوب أكس أيا كوممودو كونسيكيوات
-                        كسير سيتاشن يللأمكو لابورأس نيسي يت أليكيوب أكس أيا كوممودو كونسيكيوات
+                        <?php echo e($content->text_2); ?>
+
                     </p>
-                    <div class="col-md-3 p-tb-14">
-                        <button class="btn btn-primary p-tb-8 fs-22 fw-bold">المزيد</button>
+                    <div class="col-md-2 p-tb-14">
+                        <button class="btn btn-primary p-tb-7 fs-17 fw-bold">المزيد</button>
                     </div>
                 </div>
             </div>

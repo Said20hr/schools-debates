@@ -73,8 +73,8 @@
                                 <label for="id_carte" class="form-label fs-16 pb-2 p-r-10">البطاقة المدنية  </label>
                                 <div class="d-flex justify-content-center p-tb-14">
                                     @if($user->id_carte)
-                                        <a href="{{asset('storage/users/studen/id_carte/'.$user->id_carte)}}" target="_blank" class="c-avatar-edit">
-                                            <img src="{{asset('storage/users/studen/id_carte/'.$user->id_carte)}}" class="c-avatar-img" alt="id_carte">
+                                        <a href="{{asset('storage/users/student/id_carte/'.$user->id_carte)}}" target="_blank" class="c-avatar-edit">
+                                            <img src="{{asset('storage/users/student/id_carte/'.$user->id_carte)}}" class="c-avatar-img" alt="id_carte">
                                         </a>
                                     @else
                                         <div>

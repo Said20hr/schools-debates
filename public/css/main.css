@@ -158,7 +158,7 @@ body {
 {
     outline-style: none !important;
     background: #f97518 !important;
-    border: 1px #b85109 solid !important;
+    border: 2px #f97518 solid !important;
     color: white !important;
     border-radius: 35px ;
 }
@@ -1065,6 +1065,7 @@ selected
     }
 
 
+
 }
 
 @media only screen and (max-width: 400px) {
@@ -1075,7 +1076,7 @@ selected
     }
     .logo
     {
-        width: 75px;
+        width: 85px;
     }
        .paginate
     {
@@ -1083,6 +1084,7 @@ selected
     margin: auto;
     font-size: 16px;
     }
+
 
 }
 

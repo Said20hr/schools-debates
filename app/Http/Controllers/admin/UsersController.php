@@ -119,7 +119,7 @@ class UsersController extends Controller
             {
                 $user->avatar = $this->uploadImagesArray($request->avatar,'users/student/avatars/');
             }
-            $user->status      = true;
+            $user->status  = true;
         }
         if ($user->role == 'coach')
         {

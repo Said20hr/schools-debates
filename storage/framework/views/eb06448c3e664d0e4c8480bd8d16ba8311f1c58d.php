@@ -2,7 +2,7 @@
 
     <div class="container p-t-56 p-b-112"  dir="rtl">
         <div class="text-right p-b-60 p-t-28">
-           <h1 class="fs-26 lh-18 font-weight-bolder color-1">  اختر عضويتك و ارسل طلب تسجيلك في مناظرات المدارس</h1>
+           <h1 class="fs-24 lh-18 font-weight-bolder color-1">  اختر عضويتك و ارسل طلب تسجيلك في مناظرات المدارس</h1>
         </div>
 
       <div class="col-md-12 justify-content-center no-gutters bor-r5 p-0" style=" box-shadow: 0 5px 10px rgba(0,0,0,0.13), 0 3px 3px rgba(0,0,0,0.17);">
@@ -360,16 +360,13 @@ unset($__errorArgs, $__bag); ?>"
                       <?php echo csrf_field(); ?>
                       <input type="hidden" name="type" value="2" required>
                       <div class="text-right">
-                          <?php if($errors): ?>
-                              <?php $__currentLoopData = $errors; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                          <?php if($errors->any()): ?>
                                   <div class="alert alert-danger" role="alert">
-                                      <?php echo e($error); ?>
-
+                                      خطأ في ادخال البيانات
                                   </div>
-                              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                           <?php endif; ?>
                           <div class="p-b-14 text-right ">
-                              <legend class="mb-3 font-weight-bolder color-1 fs-26">البيانات الشخصية</legend>
+                              <legend class="mb-3 font-weight-bolder color-1 fs-22">البيانات الشخصية</legend>
                               <hr class="mb-4">
                               <div class="row mb-2">
 

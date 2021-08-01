@@ -4,10 +4,12 @@
             <a class="navbar-brand" href="">
                 <img class="logo" src="{{ URL::asset('images/debate-logo2.png')}}" alt="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button"
+                    data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="true" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse " id="navbarResponsive">
+            <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav navs-top">
                     <li class="nav-item {{ (request()->is('/')) ? 'active' : '' }} p-t-5">
                         <a class="nav-link" href="{{route('home')}}">الرئيسية</a>

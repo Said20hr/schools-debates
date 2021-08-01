@@ -10,18 +10,16 @@
                 </div>
                 <div class="row p-tb-56 d-flex align-items-center">
                     <div class="col-lg-10 col-md-10 col-sm-10 order-md-2 order-lg-1">
-                        <h1 class="fs-34 font-weight-bolder color-1">عنوان رئيسي</h1>
+                        <h1 class="fs-30 font-weight-bolder color-1">{{$content->title_6}}</h1>
                         <div class="separator text-center m-tb-14"></div>
                         <p class="fs-19">
-                            "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيومود تيمبور
-                            أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد
-                            أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد
+                            {{$content->title_6}}
                         </p>
                     </div>
                 </div>
                 <!-- active events -->
-                <div class="p-tb-56 event-1">
-                    <h1 class="fs-30 font-weight-bold color-1">الفعاليات النشطة</h1>
+                <div class="p-tb-28 event-1">
+                    <h1 class="fs-26 font-weight-bold color-1">الفعاليات النشطة</h1>
                     <div class="separator text-center m-tb-28"></div>
                     <div class="row">
                         @foreach($events as $event)
@@ -63,7 +61,7 @@
                 </div>
                 <!-- last events -->
                 <div class="p-tb-56 event-2">
-                    <h1 class="fs-30 font-weight-bold color-1">الفعاليات السابقة</h1>
+                    <h1 class="fs-26 font-weight-bold color-1">الفعاليات السابقة</h1>
                     <div class="separator text-center m-tb-28"></div>
                     <div class="">
                     <div class="row">

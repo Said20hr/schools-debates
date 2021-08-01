@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="مناظرات المدارس">
-    <meta name="author" content="">
+    <meta name="description" content="schools debates | مناظرات المدارس">
+    <meta name="author" content="schools debates">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!--===============================================================================================-->
@@ -65,7 +65,7 @@
     </div>
 @include('includes.footer')
 <!-- Scripts -->
-<script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+
 <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <script src="{{asset('vendor/jquery/jquery-3.2.1.min.js')}}"></script>
 <script src="{{asset('https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')}}"></script>

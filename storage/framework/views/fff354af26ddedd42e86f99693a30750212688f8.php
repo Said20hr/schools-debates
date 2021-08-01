@@ -28,6 +28,7 @@
                                     <th>المشاركين</th>
                                     <th>الحالة</th>
                                     <th>الصورة</th>
+                                    <th>التسجيل</th>
                                     <th colspan="3">العمليات</th>
                                 </tr>
                                 </thead>
@@ -45,12 +46,15 @@
                                             <?php endif; ?>
                                         </td>
                                         <td>
-                                            <img src="<?php echo e(asset('storage/events/'.$event->image)); ?>" alt="event-img" class="img-fluid" width="100">
+                                            <img src="<?php echo e(asset('storage/events/'.$event->image)); ?>" alt="event-img" class="img-fluid" width="100" height="50">
                                         </td>
-
+                                        <td>
+                                            <a href="<?php echo e(route('event.register',$event->id)); ?>" class="btn btn-block btn-info">سجل متفاعلبن</a>
+                                        </td>
                                         <td>
                                             <a href="<?php echo e(route('events.show', $event->id )); ?>" class="btn btn-block btn-primary">معاينة</a>
                                         </td>
+
                                         <td>
                                             <a href="<?php echo e(route('events.edit',$event->id)); ?>" class="btn btn-block btn-success">  تعديل  </a>
                                         </td>

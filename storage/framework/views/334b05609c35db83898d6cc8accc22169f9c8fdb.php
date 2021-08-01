@@ -37,7 +37,7 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>" type="text" 
-                                                      placeholder="<?php echo e(__('اكتب أسمك هنا')); ?>" name="name" value="<?php echo e(old('name')); ?>" required autofocus>
+                                                      placeholder="<?php echo e(__('اكتب أسمك هنا')); ?>" name="name" value="<?php echo e(Auth::user() ? Auth::user()->name :  old('name')); ?>" <?php echo e(Auth::user()? 'disabled' :'required'); ?> autofocus>
                                            </div>
                                            <?php $__errorArgs = ['name'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -62,7 +62,8 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" type="text" placeholder="<?php echo e(__('أكتب رقم الهاتف هنا')); ?>" name="phone" value="<?php echo e(old('phone')); ?>" autofocus  required>
+unset($__errorArgs, $__bag); ?>" type="text" placeholder="<?php echo e(__('أكتب رقم الهاتف هنا')); ?>" name="phone"
+                                                      value="<?php echo e(Auth::user() ? Auth::user()->phone :  old('phone')); ?>" autofocus  <?php echo e(Auth::user() ? 'disabled' :'required'); ?>>
                                            </div>
                                            <?php $__errorArgs = ['phone'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -88,7 +89,7 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>" type="text" placeholder="<?php echo e(__('example@example.com')); ?>"
-                                                      name="email" value="<?php echo e(old('email')); ?>" autofocus required>
+                                                      name="email" value="<?php echo e(Auth::user() ? Auth::user()->email :  old('email')); ?>" autofocus <?php echo e(Auth::user()? 'disabled' :'required'); ?>>
                                            </div>
                                            <?php $__errorArgs = ['email'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -169,7 +170,8 @@ unset($__errorArgs, $__bag); ?>
                                             </div>
                                             <div class="cn-info-content p-t-7">
                                                 <h4 class="fs-22 font-weight-bold color-1 mb-2">العنوان</h4>
-                                                2512, New Market,Eliza Road, Sincher 80 CA Canada, USA
+                                                <?php echo e($content->address); ?>
+
                                             </div>
                                         </div>
 
@@ -179,7 +181,8 @@ unset($__errorArgs, $__bag); ?>
                                             </div>
                                             <div class="cn-info-content p-t-7">
                                                 <h4 class="fs-22 font-weight-bold color-1 mb-2">البريد الإلكتروني</h4>
-                                                support@Rikada.com<br>Rikada@gmail.com
+                                                <?php echo e($content->email_1); ?><br>  <?php echo e($content->email_2); ?>
+
                                             </div>
                                         </div>
 
@@ -189,7 +192,8 @@ unset($__errorArgs, $__bag); ?>
                                             </div>
                                             <div class="cn-info-content p-t-7">
                                                 <h4 class="fs-22 font-weight-bold color-1 mb-2">رقم الهاتف</h4>
-                                                (41) 123 521 458<br>+91 235 548 7548
+                                                <?php echo e($content->phone_2); ?><br>  <?php echo e($content->phone_1); ?>
+
                                             </div>
                                         </div>
 

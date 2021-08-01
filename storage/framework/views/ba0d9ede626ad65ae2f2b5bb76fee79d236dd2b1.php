@@ -2,7 +2,7 @@
 
     <div class="container p-t-56 p-b-112"  dir="rtl">
         <div class="text-center p-b-50 p-t-28">
-            <h1 class="fs-30 font-weight-bolder color-1">  سجل الدخول لحسابك  في مناظرات المدارس</h1>
+            <h1 class="fs-24 font-weight-bolder color-1">  سجل الدخول لحسابك  في مناظرات المدارس</h1>
         </div>
 
       <div class="row justify-content-center">
@@ -17,7 +17,7 @@
             </div>
           <div class="card-group">
             <div class="card bor-r5 ">
-                <div class="card-header bg-primary p-tb-24 text-center" >
+                <div class="card-header bg-primary p-tb-14 text-center" >
                     <div class="text-center font-weight-bolder fs-22 m-lr-56 text-white">سجل الدخول</div>
                 </div>
                 <div class="card-body p-t-60 p-b-40 text-right " >
